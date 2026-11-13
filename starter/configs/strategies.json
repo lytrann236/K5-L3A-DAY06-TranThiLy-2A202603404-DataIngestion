@@ -1,0 +1,23 @@
+{
+  "A": {
+    "index": "A",
+    "chunker": "fixed_size",
+    "params": {"size": 500, "overlap": 50},
+    "use_filter": false,
+    "hypothesis": "Baseline: fixed 500-char windows cut code/quiz blocks and sentences mid-way."
+  },
+  "B": {
+    "index": "B",
+    "chunker": "by_paragraph",
+    "params": {"max_size": 800, "min_size": 200},
+    "use_filter": false,
+    "hypothesis": "Splitting at headings/boxes keeps definitions with their explanation -> higher Evidence Hit@3 and coherence than A."
+  },
+  "C": {
+    "index": "B",
+    "chunker": "by_paragraph",
+    "params": {"max_size": 800, "min_size": 200},
+    "use_filter": true,
+    "hypothesis": "Same chunks as B; SQL filter on chapter (only for questions with a filter) removes cross-chapter confusions (strings vs lists)."
+  }
+}

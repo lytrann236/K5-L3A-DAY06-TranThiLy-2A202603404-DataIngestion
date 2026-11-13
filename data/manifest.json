@@ -1,0 +1,521 @@
+{
+  "corpus_name": "OpenStax Introduction to Python Programming — Ch.8 Strings & Ch.9 Lists",
+  "sources": [
+    {
+      "source_id": "openstax-intro-python",
+      "title": "Introduction to Python Programming (OpenStax)",
+      "source_path_or_url": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+      "book_page_url": "https://openstax.org/details/books/introduction-python-programming",
+      "license_or_permission": "CC BY-NC-SA 4.0 (©2026 Rice University; original publication 2024). Non-commercial educational use; attribution 'Access for free at openstax.org'. OpenStax name/logo not covered by license.",
+      "accessed_at": "2026-11-13",
+      "snapshot": "WEB PDF, 397 physical pages, CreationDate 2026-04-20 (PDF metadata)",
+      "file_in_repo": false,
+      "how_to_obtain": "Download the PDF from source_path_or_url into data/raw/ (not committed).",
+      "pages_used": "PDF pages 197–236 (= book pages 187–226), chapters 8 and 9",
+      "page_numbering": "pdf_page = 1-based physical page index (pypdf); book_page = printed page number = pdf_page - 10",
+      "counting_rule": "Count every physical page of Ch.8-9 that contains chapter text, examples or exercises; exclude blank pages (PDF p.220). No cover/TOC/answer-key/index pages are in range. Character counts are after normalization.",
+      "physical_pages": 40,
+      "content_pages_counted": 39,
+      "total_chars_counted": 48481,
+      "extraction": "pypdf page.extract_text() -> Unicode NFKC -> drop footer 'Access for free at openstax.org' and running header/page-number lines -> collapse spaces inside lines (line breaks kept). Implemented in starter/src/ingestion.py.",
+      "known_issues": [
+        "Running header alternates: even pages show only '8 • Strings'/'9 • Lists', odd pages show section title -> section must be propagated from in-text headings, not from header.",
+        "Tables (8.1, 8.2, 8.3, 9.1) are flattened; cell order may be scrambled.",
+        "Code listings lose indentation; numbered listings (Example 9.1, 9.4) extract line numbers as a separate block.",
+        "Some hyphenated line breaks are joined without hyphen (e.g. 'centeraligned', 'listof-lists').",
+        "Figures/animations ('CHECKPOINT' videos) are not available as text.",
+        "Source errata kept as-is: Table 9.1 describes min(list) as 'Returns the maximum element'; Example 9.3 defines 'snum_list' but uses 'num_list'."
+      ],
+      "pages": [
+        {
+          "page_id": "pyprog-p197",
+          "pdf_page": 197,
+          "book_page": 187,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.1"
+          ],
+          "chars_normalized": 1150,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p198",
+          "pdf_page": 198,
+          "book_page": 188,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.1"
+          ],
+          "chars_normalized": 1706,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p199",
+          "pdf_page": 199,
+          "book_page": 189,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.1"
+          ],
+          "chars_normalized": 1043,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p200",
+          "pdf_page": 200,
+          "book_page": 190,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.1",
+            "8.2"
+          ],
+          "chars_normalized": 1786,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p201",
+          "pdf_page": 201,
+          "book_page": 191,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.2"
+          ],
+          "chars_normalized": 1058,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p202",
+          "pdf_page": 202,
+          "book_page": 192,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.2"
+          ],
+          "chars_normalized": 843,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p203",
+          "pdf_page": 203,
+          "book_page": 193,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.2"
+          ],
+          "chars_normalized": 1307,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p204",
+          "pdf_page": 204,
+          "book_page": 194,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.2",
+            "8.3"
+          ],
+          "chars_normalized": 1254,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p205",
+          "pdf_page": 205,
+          "book_page": 195,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.3"
+          ],
+          "chars_normalized": 784,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p206",
+          "pdf_page": 206,
+          "book_page": 196,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.3"
+          ],
+          "chars_normalized": 831,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p207",
+          "pdf_page": 207,
+          "book_page": 197,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.3"
+          ],
+          "chars_normalized": 1269,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p208",
+          "pdf_page": 208,
+          "book_page": 198,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.3"
+          ],
+          "chars_normalized": 702,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p209",
+          "pdf_page": 209,
+          "book_page": 199,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 1913,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p210",
+          "pdf_page": 210,
+          "book_page": 200,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 1266,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p211",
+          "pdf_page": 211,
+          "book_page": 201,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 1136,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p212",
+          "pdf_page": 212,
+          "book_page": 202,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 1688,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p213",
+          "pdf_page": 213,
+          "book_page": 203,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 2030,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p214",
+          "pdf_page": 214,
+          "book_page": 204,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 1540,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p215",
+          "pdf_page": 215,
+          "book_page": 205,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4"
+          ],
+          "chars_normalized": 1253,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p216",
+          "pdf_page": 216,
+          "book_page": 206,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.4",
+            "8.5"
+          ],
+          "chars_normalized": 1454,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p217",
+          "pdf_page": 217,
+          "book_page": 207,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.5"
+          ],
+          "chars_normalized": 1049,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p218",
+          "pdf_page": 218,
+          "book_page": 208,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.5",
+            "8.6"
+          ],
+          "chars_normalized": 1780,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p219",
+          "pdf_page": 219,
+          "book_page": 209,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [
+            "8.6"
+          ],
+          "chars_normalized": 1006,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p220",
+          "pdf_page": 220,
+          "book_page": 210,
+          "chapter": 8,
+          "chapter_title": "Strings",
+          "sections": [],
+          "chars_normalized": 15,
+          "counted": false,
+          "excluded_reason": "blank page (only running header/page number)"
+        },
+        {
+          "page_id": "pyprog-p221",
+          "pdf_page": 221,
+          "book_page": 211,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.1"
+          ],
+          "chars_normalized": 1061,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p222",
+          "pdf_page": 222,
+          "book_page": 212,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.1"
+          ],
+          "chars_normalized": 1371,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p223",
+          "pdf_page": 223,
+          "book_page": 213,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.1"
+          ],
+          "chars_normalized": 980,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p224",
+          "pdf_page": 224,
+          "book_page": 214,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.1",
+            "9.2"
+          ],
+          "chars_normalized": 1218,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p225",
+          "pdf_page": 225,
+          "book_page": 215,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.2"
+          ],
+          "chars_normalized": 1230,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p226",
+          "pdf_page": 226,
+          "book_page": 216,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.2",
+            "9.3"
+          ],
+          "chars_normalized": 1148,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p227",
+          "pdf_page": 227,
+          "book_page": 217,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.3"
+          ],
+          "chars_normalized": 1042,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p228",
+          "pdf_page": 228,
+          "book_page": 218,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.3"
+          ],
+          "chars_normalized": 909,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p229",
+          "pdf_page": 229,
+          "book_page": 219,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.3",
+            "9.4"
+          ],
+          "chars_normalized": 1374,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p230",
+          "pdf_page": 230,
+          "book_page": 220,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.4"
+          ],
+          "chars_normalized": 1099,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p231",
+          "pdf_page": 231,
+          "book_page": 221,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.4"
+          ],
+          "chars_normalized": 1167,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p232",
+          "pdf_page": 232,
+          "book_page": 222,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.4",
+            "9.5"
+          ],
+          "chars_normalized": 1274,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p233",
+          "pdf_page": 233,
+          "book_page": 223,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.5"
+          ],
+          "chars_normalized": 1148,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p234",
+          "pdf_page": 234,
+          "book_page": 224,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.5"
+          ],
+          "chars_normalized": 1255,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p235",
+          "pdf_page": 235,
+          "book_page": 225,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.5",
+            "9.6"
+          ],
+          "chars_normalized": 1300,
+          "counted": true
+        },
+        {
+          "page_id": "pyprog-p236",
+          "pdf_page": 236,
+          "book_page": 226,
+          "chapter": 9,
+          "chapter_title": "Lists",
+          "sections": [
+            "9.6"
+          ],
+          "chars_normalized": 1057,
+          "counted": true
+        }
+      ]
+    }
+  ]
+}

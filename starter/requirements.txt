@@ -1,4 +1,7 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup and PDF parsing
 psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
+# Embedding provider (default: local sentence-transformers, no API key)
+sentence-transformers>=3,<6
+# Optional API provider: pip install openai

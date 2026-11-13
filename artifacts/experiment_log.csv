@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size (chars over page stream),500,50,"document_id, source, page, pages[], chapter, section",none,BAAI/bge-small-en-v1.5 (384d) cosine,"Baseline: windows cut code/quiz blocks and sentences mid-way",,,,,index A
+B,by_paragraph (headings/boxes/paragraphs; min 200),max 800,0,"document_id, source, page, pages[], chapter, section",none,BAAI/bge-small-en-v1.5 (384d) cosine,"Structure-aware chunks keep definition + explanation together -> higher Evidence Hit@3 and coherence than A",,,,,index B
+C,same as B,max 800,0,same as B,"chapter (SQL WHERE) only for q14, q15, t01",BAAI/bge-small-en-v1.5 (384d) cosine,"Only change vs B: chapter filter removes strings-vs-lists confusion on filter questions",,,,,reuses index B
