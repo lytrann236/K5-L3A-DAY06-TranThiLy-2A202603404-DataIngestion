@@ -1,0 +1,82 @@
+{
+  "run_at": "2026-11-13T11:43:10+00:00",
+  "provider": "sentence-transformers",
+  "model": "BAAI/bge-small-en-v1.5",
+  "dimensions": 384,
+  "metric": "cosine (pgvector <=>), exact scan, no ANN index",
+  "versions": {
+    "python": "3.13.12",
+    "pypdf": "6.21.4",
+    "psycopg": "3.3.8",
+    "sentence-transformers": "6.3.0",
+    "torch": "2.15.0"
+  },
+  "cost_usd": 0.0,
+  "pages": 39,
+  "indexes": {
+    "A": {
+      "config": {
+        "index": "A",
+        "chunker": "fixed_size",
+        "params": {
+          "size": 500,
+          "overlap": 50
+        },
+        "use_filter": false,
+        "hypothesis": "Baseline: fixed 500-char windows cut code/quiz blocks and sentences mid-way."
+      },
+      "chunks": 108,
+      "rows_before": 0,
+      "rows_after": 108,
+      "embedded": 108,
+      "unchanged": 0,
+      "deleted_obsolete": 0,
+      "len_min": 369,
+      "len_median": 500.0,
+      "len_mean": 498.4,
+      "len_max": 500,
+      "total_chars": 53830,
+      "approx_tokens": 13457,
+      "chunks_spanning_pages": 38,
+      "embed_seconds": 1.66,
+      "index_seconds": 1.77
+    },
+    "B": {
+      "config": {
+        "index": "B",
+        "chunker": "by_paragraph",
+        "params": {
+          "max_size": 800,
+          "min_size": 200
+        },
+        "use_filter": false,
+        "hypothesis": "Splitting at headings/boxes keeps definitions with their explanation -> higher Evidence Hit@3 and coherence than A."
+      },
+      "chunks": 92,
+      "rows_before": 0,
+      "rows_after": 92,
+      "embedded": 92,
+      "unchanged": 0,
+      "deleted_obsolete": 0,
+      "len_min": 122,
+      "len_median": 560.0,
+      "len_mean": 526.4,
+      "len_max": 792,
+      "total_chars": 48428,
+      "approx_tokens": 12107,
+      "chunks_spanning_pages": 33,
+      "embed_seconds": 0.65,
+      "index_seconds": 0.73
+    }
+  },
+  "total_seconds": 2.98,
+  "ingest_log": [
+    {
+      "level": "info",
+      "page": 220,
+      "event": "excluded",
+      "detail": "blank page (only running header/page number)",
+      "chars": 0
+    }
+  ]
+}

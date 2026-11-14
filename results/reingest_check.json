@@ -1,0 +1,17 @@
+{
+  "run_at": "2026-11-13T11:43:13+00:00",
+  "indexes": {
+    "A": {
+      "rows_after_first": 108,
+      "rows_after_second": 108,
+      "embedded_second": 0,
+      "no_duplicates": true
+    },
+    "B": {
+      "rows_after_first": 92,
+      "rows_after_second": 92,
+      "embedded_second": 0,
+      "no_duplicates": true
+    }
+  }
+}

@@ -1,0 +1,514 @@
+position_id,pdf_page,anchor_text,strategy,chunk_id,chunk_text,score_0_2,reason
+pos01,197,g operations Learning objectives By the end of this section,A,A-openstax-intro-python-0001,"mparing string values, string slicing, searching,
+testing, formatting, and modifying.
+8.1 String operations
+Learning objectives
+By the end of this section you should be able to
+• Compare strings using logical and membership operators.
+• Use lower() and upper() string methods to convert string values to lowercase and uppercase
+characters.
+String comparison
+String values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and
+not in). When comparing two stri",1,cut mid-word at start (mparing) and end (two stri); mixes intro tail + 8.1 objectives + start of String comparison; objectives complete
+pos01,197,g operations Learning objectives By the end of this section,B,B-openstax-intro-python-0002,"8.1 String operations
+Learning objectives
+By the end of this section you should be able to
+• Compare strings using logical and membership operators.
+• Use lower() and upper() string methods to convert string values to lowercase and uppercase
+characters.",2,"starts at section heading 8.1, ends at full sentence; complete learning objectives only"
+pos01,197,g operations Learning objectives By the end of this section,C,B-openstax-intro-python-0002,"8.1 String operations
+Learning objectives
+By the end of this section you should be able to
+• Compare strings using logical and membership operators.
+• Use lower() and upper() string methods to convert string values to lowercase and uppercase
+characters.",2,"same chunk as B; starts at section heading 8.1, ends at full sentence; complete learning objectives only"
+pos02,198,values are equal. != Checks whether two string values are no,A,A-openstax-intro-python-0004,"h ""ab"" < ""ac"".
+== Checks whether two
+string values are equal.
+""aa"" ==
+""aa"" True
+Since all characters in the first operand and
+the second operand are the same, the two
+string values are equal.
+!=
+Checks whether two
+string values are not
+equal.
+""a"" !=
+""b"" True
+The two operands contain different string
+values (""a"" vs. ""b""), and the result of
+checking whether the two are not the same
+evaluates to True.
+in
+Checks whether the
+second operand
+contains the first
+operand.
+""a"" in
+""bc"" False
+Since string ""b",1,"cut at start (h ""ab"") and end (Since string ""b); != row itself complete; table flattened"
+pos02,198,values are equal. != Checks whether two string values are no,B,B-openstax-intro-python-0004,"< or <=
+Checks whether the
+first string value is less
+than (or less than or
+equal to) the second
+string value.
+""ab"" <
+""ac"" True
+When comparing ""ab"" operand to ""ac""
+operand, the first characters are the same,
+but the second character of ""ab"" is less
+than the second character in ""ac"" and as
+such ""ab"" < ""ac"".
+== Checks whether two
+string values are equal.
+""aa"" ==
+""aa"" True
+Since all characters in the first operand and
+the second operand are the same, the two
+string values are equal.
+!=
+Checks whether two
+string values are not
+equal.
+""a"" !=
+""b"" True
+The two operands contain different string
+values (""a"" vs. ""b""), and the result of
+checking whether the two are not the same
+evaluates to True.
+in
+Checks whether the
+second operand
+contains the first
+operand.",1,"starts mid-table (no header, > row missing); ends after ""in"" description, its example cut; != part complete"
+pos02,198,values are equal. != Checks whether two string values are no,C,B-openstax-intro-python-0004,"< or <=
+Checks whether the
+first string value is less
+than (or less than or
+equal to) the second
+string value.
+""ab"" <
+""ac"" True
+When comparing ""ab"" operand to ""ac""
+operand, the first characters are the same,
+but the second character of ""ab"" is less
+than the second character in ""ac"" and as
+such ""ab"" < ""ac"".
+== Checks whether two
+string values are equal.
+""aa"" ==
+""aa"" True
+Since all characters in the first operand and
+the second operand are the same, the two
+string values are equal.
+!=
+Checks whether two
+string values are not
+equal.
+""a"" !=
+""b"" True
+The two operands contain different string
+values (""a"" vs. ""b""), and the result of
+checking whether the two are not the same
+evaluates to True.
+in
+Checks whether the
+second operand
+contains the first
+operand.",1,"same chunk as B; starts mid-table (no header, > row missing); ends after ""in"" description, its example cut; != part complete"
+pos03,199,d on the string variable x to convert all characters to lowe,A,A-openstax-intro-python-0007,"cters to uppercase. Both the lower() and upper() methods do not modify
+the string.
+EXAMPLE 8.1
+Converting characters in a string
+In the example below, the lower() and upper() string methods are called on the string variable x to
+convert all characters to lowercase and uppercase, respectively.
+x = ""Apples""
+# The lower() method converts a string to all lowercase characters
+print(x.lower())
+# The upper() method converts a string to all uppercase characters
+print(x.upper())
+The above code's output i",1,cut at start (cters) and end (output i); example code complete but its output lost
+pos03,199,d on the string variable x to convert all characters to lowe,B,B-openstax-intro-python-0007,"Converting characters in a string
+In the example below, the lower() and upper() string methods are called on the string variable x to
+convert all characters to lowercase and uppercase, respectively.
+x = ""Apples""
+# The lower() method converts a string to all lowercase characters
+print(x.lower())
+# The upper() method converts a string to all uppercase characters
+print(x.upper())
+The above code's output is:
+apples
+APPLES",2,"starts at example title, ends after full output; one complete example (label EXAMPLE 8.1 in previous chunk)"
+pos03,199,d on the string variable x to convert all characters to lowe,C,B-openstax-intro-python-0007,"Converting characters in a string
+In the example below, the lower() and upper() string methods are called on the string variable x to
+convert all characters to lowercase and uppercase, respectively.
+x = ""Apples""
+# The lower() method converts a string to all lowercase characters
+print(x.lower())
+# The upper() method converts a string to all uppercase characters
+print(x.upper())
+The above code's output is:
+apples
+APPLES",2,"same chunk as B; starts at example title, ends after full output; one complete example (label EXAMPLE 8.1 in previous chunk)"
+pos04,200,ble to • Use string indexing to access characters in the str,A,A-openstax-intro-python-0010,"rt s_input to lowercase and check if s_input is between ""a"" and ""t"".
+Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/
+8-1-string-operations)
+8.2 String slicing
+Learning objectives
+By the end of this section you should be able to
+• Use string indexing to access characters in the string.
+• Use string slicing to get a substring from a string.
+• Identify immutability characteristics of strings.
+String indexing
+A string is a type of sequence. A string is mad",1,cut at start (rt s_input) and end (is mad); mixes 8.1 exercise tail + 8.2 objectives; objectives complete
+pos04,200,ble to • Use string indexing to access characters in the str,B,B-openstax-intro-python-0010,"8.2 String slicing
+Learning objectives
+By the end of this section you should be able to
+• Use string indexing to access characters in the string.
+• Use string slicing to get a substring from a string.
+• Identify immutability characteristics of strings.",2,"starts at section heading 8.2, ends at full sentence; complete learning objectives only"
+pos04,200,ble to • Use string indexing to access characters in the str,C,B-openstax-intro-python-0010,"8.2 String slicing
+Learning objectives
+By the end of this section you should be able to
+• Use string indexing to access characters in the string.
+• Use string slicing to get a substring from a string.
+• Identify immutability characteristics of strings.",2,"same chunk as B; starts at section heading 8.2, ends at full sentence; complete learning objectives only"
+pos05,201,"with the name of a string variable, a sequence of characters",A,A-openstax-intro-python-0013,"e character at index -2 in the string ""Blue""?
+a. ""e""
+b. ""u""
+c. ""l""
+3 . What is the output of the following code?
+word = ""chance""
+print(word[-1] == word[5])
+a. True
+b. False
+String slicing
+String slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing
+operator can be used. When [a:b] is used with the name of a string variable, a sequence of characters
+starting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. I",1,cut at start (e character) and end (optional. I); mixes quiz tail + slicing definition; [a:b] sentence complete
+pos05,201,"with the name of a string variable, a sequence of characters",B,B-openstax-intro-python-0012,"CONCEPTS IN PRACTICE
+Accessing characters in a string using indexing
+1 . Which character is at index 1 in the string ""hello""?
+a. ""h""
+b. ""e""
+c. ""o""
+2 . What is the character at index -2 in the string ""Blue""?
+a. ""e""
+b. ""u""
+c. ""l""
+3 . What is the output of the following code?
+word = ""chance""
+print(word[-1] == word[5])
+a. True
+b. False
+String slicing
+String slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing
+operator can be used. When [a:b] is used with the name of a string variable, a sequence of characters
+starting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not
+provided, the default values are 0 and len(string), respectively.
+EXAMPLE 8.2",1,clean start (quiz box) and full slicing definition incl. defaults; but mixes indexing quiz + slicing theory; dangling EXAMPLE 8.2 label at end
+pos05,201,"with the name of a string variable, a sequence of characters",C,B-openstax-intro-python-0012,"CONCEPTS IN PRACTICE
+Accessing characters in a string using indexing
+1 . Which character is at index 1 in the string ""hello""?
+a. ""h""
+b. ""e""
+c. ""o""
+2 . What is the character at index -2 in the string ""Blue""?
+a. ""e""
+b. ""u""
+c. ""l""
+3 . What is the output of the following code?
+word = ""chance""
+print(word[-1] == word[5])
+a. True
+b. False
+String slicing
+String slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing
+operator can be used. When [a:b] is used with the name of a string variable, a sequence of characters
+starting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not
+provided, the default values are 0 and len(string), respectively.
+EXAMPLE 8.2",1,same chunk as B; clean start (quiz box) and full slicing definition incl. defaults; but mixes indexing quiz + slicing theory; dangling EXAMPLE 8.2 label at end
+pos06,202,"he following code? a_string = ""Hello world"" print(a_string[2",A,A-openstax-intro-python-0015,"AMPLE 8.3
+Getting the hour
+Consider a time value is given as ""hh:mm"" with ""hh"" representing the hour and ""mm"" representing the
+minutes. To retrieve only the string's hour portion, the following code can be used:
+time_string = ""14:50""
+hour = time_string[:2]
+print(hour)
+The above code's output is:
+14
+CONCEPTS IN PRACTICE
+Getting a substring using string slicing
+4 . What is the output of the following code?
+a_string = ""Hello world""
+print(a_string[2:4])
+a. ""el""
+b. ""ll""
+c. ""llo""
+5 . What is the outpu",1,cut at start (AMPLE 8.3) and end (What is the outpu); mixes example 8.3 + quiz; quiz Q4 complete
+pos06,202,"he following code? a_string = ""Hello world"" print(a_string[2",B,B-openstax-intro-python-0015,"CONCEPTS IN PRACTICE
+Getting a substring using string slicing
+4 . What is the output of the following code?
+a_string = ""Hello world""
+print(a_string[2:4])
+a. ""el""
+b. ""ll""
+c. ""llo""
+5 . What is the output of the following code?
+location = ""classroom""
+print(location[-3:-1])
+a. ""ro""
+b. ""oo""
+c. ""oom""
+6 . What is the output of the following code?",1,"clean start (quiz box), one topic, Q4-Q5 complete; ends with dangling Q6 question, its code/options cut"
+pos06,202,"he following code? a_string = ""Hello world"" print(a_string[2",C,B-openstax-intro-python-0015,"CONCEPTS IN PRACTICE
+Getting a substring using string slicing
+4 . What is the output of the following code?
+a_string = ""Hello world""
+print(a_string[2:4])
+a. ""el""
+b. ""ll""
+c. ""llo""
+5 . What is the output of the following code?
+location = ""classroom""
+print(location[-3:-1])
+a. ""ro""
+b. ""oo""
+c. ""oom""
+6 . What is the output of the following code?",1,"same chunk as B; clean start (quiz box), one topic, Q4-Q5 complete; ends with dangling Q6 question, its code/options cut"
+pos07,203,"g"" x = ""*"" + x 8 . What type of error will result from the f",A,A-openstax-intro-python-0018,"a string to character ""*"" in a new string?
+a. x = ""string""
+x[0] = ""*""
+b. x = ""string""
+x = ""*"" + x[1:]
+c. x = ""string""
+x = ""*"" + x
+8 . What type of error will result from the following code?
+string_variable = ""example""
+string_variable[-1] = """"
+a. TypeError
+b. IndexError
+c. NameError
+9 . What is the output of the following code?
+str = ""morning""
+str = str[1]
+print(str)
+a. TypeError
+b. m
+c. o
+Changing the greeting message
+Given the string ""Hello my fellow classmates"" containing a greeting message, p",1,"cut at start (Q7 question start missing) and end (message, p); mixes quiz + TRY IT; Q8 complete"
+pos07,203,"g"" x = ""*"" + x 8 . What type of error will result from the f",B,B-openstax-intro-python-0017,"Modifying string content
+7 . What is the correct way of replacing the first character in a string to character ""*"" in a new string?
+a. x = ""string""
+x[0] = ""*""
+b. x = ""string""
+x = ""*"" + x[1:]
+c. x = ""string""
+x = ""*"" + x
+8 . What type of error will result from the following code?
+string_variable = ""example""
+string_variable[-1] = """"
+a. TypeError
+b. IndexError
+c. NameError
+9 . What is the output of the following code?
+str = ""morning""
+str = str[1]
+print(str)
+a. TypeError
+b. m
+c. o
+Changing the greeting message
+Given the string ""Hello my fellow classmates"" containing a greeting message, print the first word by
+getting the beginning of the string up to (and including) the 5th character. Change the first word in the
+string to ""Hi"" instead of ""hello"" and print the greeting message again.",2,"starts at quiz title, ends at full sentence; Q7-Q9 + TRY IT all complete, same topic (string immutability)"
+pos07,203,"g"" x = ""*"" + x 8 . What type of error will result from the f",C,B-openstax-intro-python-0017,"Modifying string content
+7 . What is the correct way of replacing the first character in a string to character ""*"" in a new string?
+a. x = ""string""
+x[0] = ""*""
+b. x = ""string""
+x = ""*"" + x[1:]
+c. x = ""string""
+x = ""*"" + x
+8 . What type of error will result from the following code?
+string_variable = ""example""
+string_variable[-1] = """"
+a. TypeError
+b. IndexError
+c. NameError
+9 . What is the output of the following code?
+str = ""morning""
+str = str[1]
+print(str)
+a. TypeError
+b. m
+c. o
+Changing the greeting message
+Given the string ""Hello my fellow classmates"" containing a greeting message, print the first word by
+getting the beginning of the string up to (and including) the 5th character. Change the first word in the
+string to ""Hi"" instead of ""hello"" and print the greeting message again.",2,"same chunk as B; starts at quiz title, ends at full sentence; Q7-Q9 + TRY IT all complete, same topic (string immutability)"
+pos08,204,er of substrings in a given string. • Search a string to fin,A,A-openstax-intro-python-0021,"ng.
+• Call the count() method to count the number of substrings in a given string.
+• Search a string to find a substring using the find() method.
+• Use the index() method to find the index of the first occurrence of a substring in a given string.
+• Write a for loop on strings using in operator.
+in operator
+The in Boolean operator can be used to check if a string contains another string. in returns True if the first
+string exists in the second string, False otherwise.
+CHECKPOINT
+What is in the ph",1,"cut at start (ng., first objective + 8.3 heading lost) and end (in the ph); mixes objectives + in operator; anchor objective complete"
+pos08,204,er of substrings in a given string. • Search a string to fin,B,B-openstax-intro-python-0019,"8.3 Searching/testing strings
+Learning objectives
+By the end of this section you should be able to
+• Use the in operator to identify whether a given string contains a substring.
+• Call the count() method to count the number of substrings in a given string.
+• Search a string to find a substring using the find() method.
+• Use the index() method to find the index of the first occurrence of a substring in a given string.
+• Write a for loop on strings using in operator.
+in operator
+The in Boolean operator can be used to check if a string contains another string. in returns True if the first
+string exists in the second string, False otherwise.
+CHECKPOINT
+What is in the phrase?
+What is the phrase?; ch 8, video 3 (https://www.openstax.org/r/what-in-phrase)",2,"starts at section heading 8.3, ends at full video link; all 5 objectives + in operator explanation complete, same section"
+pos08,204,er of substrings in a given string. • Search a string to fin,C,B-openstax-intro-python-0019,"8.3 Searching/testing strings
+Learning objectives
+By the end of this section you should be able to
+• Use the in operator to identify whether a given string contains a substring.
+• Call the count() method to count the number of substrings in a given string.
+• Search a string to find a substring using the find() method.
+• Use the index() method to find the index of the first occurrence of a substring in a given string.
+• Write a for loop on strings using in operator.
+in operator
+The in Boolean operator can be used to check if a string contains another string. in returns True if the first
+string exists in the second string, False otherwise.
+CHECKPOINT
+What is in the phrase?
+What is the phrase?; ch 8, video 3 (https://www.openstax.org/r/what-in-phrase)",2,"same chunk as B; starts at section heading 8.3, ends at full video link; all 5 objectives + in operator explanation complete, same section"
+pos09,205,HECKPOINT for loop using in operator For loop using in opera,A,A-openstax-intro-python-0023,"be used to iterate over characters in a string using a for loop. In each for loop iteration,
+one character is read and will be the loop variable for that iteration.
+CHECKPOINT
+for loop using in operator
+For loop using in operator; ch 8, video 4 (https://www.openstax.org/r/for-loop-in-operator)
+CONCEPTS IN PRACTICE
+Using in operator within for loop
+4 . What is the output of the following code?
+for c in ""string"":
+print(c, end = """")
+a. string
+b. s
+t
+r
+i
+n
+g
+c. s t r i n g
+5 . What is the output of",1,"cut at start (subject ""The in operator can"" lost) and end (5. What is the output of); mixes theory + quiz; checkpoint complete"
+pos09,205,HECKPOINT for loop using in operator For loop using in opera,B,B-openstax-intro-python-0020,"CONCEPTS IN PRACTICE
+Using in operator to find substrings
+1 . What is the output of (""a"" in ""an umbrella"")?
+a. 2
+TRY IT
+b. False
+c. True
+d. 1
+2 . What is the output of (""ab"" in ""arbitrary"")?
+a. True
+b. False
+3 . What is the output of ("""" in ""string"")?
+a. True
+b. False
+For loop using in operator
+The in operator can be used to iterate over characters in a string using a for loop. In each for loop iteration,
+one character is read and will be the loop variable for that iteration.
+CHECKPOINT
+for loop using in operator
+For loop using in operator; ch 8, video 4 (https://www.openstax.org/r/for-loop-in-operator)",1,clean start and end; but mixes in-operator quiz + for-loop theory (subheading not split after b. False); stray TRY IT inside Q1 options
+pos09,205,HECKPOINT for loop using in operator For loop using in opera,C,B-openstax-intro-python-0020,"CONCEPTS IN PRACTICE
+Using in operator to find substrings
+1 . What is the output of (""a"" in ""an umbrella"")?
+a. 2
+TRY IT
+b. False
+c. True
+d. 1
+2 . What is the output of (""ab"" in ""arbitrary"")?
+a. True
+b. False
+3 . What is the output of ("""" in ""string"")?
+a. True
+b. False
+For loop using in operator
+The in operator can be used to iterate over characters in a string using a for loop. In each for loop iteration,
+one character is read and will be the loop variable for that iteration.
+CHECKPOINT
+for loop using in operator
+For loop using in operator; ch 8, video 4 (https://www.openstax.org/r/for-loop-in-operator)",1,same chunk as B; clean start and end; but mixes in-operator quiz + for-loop theory (subheading not split after b. False); stray TRY IT inside Q1 options
+pos10,206,urned. CHECKPOINT Counting the number of occurrences of a su,A,A-openstax-intro-python-0025,"the given substring
+does not exist in the given string, the value 0 is returned.
+CHECKPOINT
+Counting the number of occurrences of a substring
+Counting the number of occurrences of a substring; ch 8, video 5 (https://www.openstax.org/r/counting-
+substrings)
+CONCEPTS IN PRACTICE
+Using count() to count the number of substrings
+7 . What is the output of (aaa"".count(""a""))?
+a. True
+b. 1
+c. 3
+8 . What is the output of (""weather"".count(""b""))?
+a. 0
+b. -1
+c. False
+9 . What is the output of (""aaa"".count(""",1,"cut at start (If + count() definition lost) and end (count("" ); mixes theory tail + quiz; checkpoint complete"
+pos10,206,urned. CHECKPOINT Counting the number of occurrences of a su,B,B-openstax-intro-python-0022,"CHECKPOINT
+Counting the number of occurrences of a substring
+Counting the number of occurrences of a substring; ch 8, video 5 (https://www.openstax.org/r/counting-
+substrings)
+CONCEPTS IN PRACTICE
+Using count() to count the number of substrings
+7 . What is the output of (aaa"".count(""a""))?
+a. True
+b. 1
+c. 3
+8 . What is the output of (""weather"".count(""b""))?
+a. 0
+b. -1
+c. False
+9 . What is the output of (""aaa"".count(""aa""))?
+a. 1
+b. 2
+c. 3
+find()
+The find() method returns the index of the first occurrence of a substring in a given string. If the substring
+does not exist in the given string, the value of -1 is returned.
+CHECKPOINT
+Finding the first index of a substring
+Finding the first index of a substring; ch 8, video 6 (https://www.openstax.org/r/finding-substring-index)",1,clean start/end; but count() checkpoint separated from its theory (previous chunk) and mixes count() quiz + find() theory
+pos10,206,urned. CHECKPOINT Counting the number of occurrences of a su,C,B-openstax-intro-python-0022,"CHECKPOINT
+Counting the number of occurrences of a substring
+Counting the number of occurrences of a substring; ch 8, video 5 (https://www.openstax.org/r/counting-
+substrings)
+CONCEPTS IN PRACTICE
+Using count() to count the number of substrings
+7 . What is the output of (aaa"".count(""a""))?
+a. True
+b. 1
+c. 3
+8 . What is the output of (""weather"".count(""b""))?
+a. 0
+b. -1
+c. False
+9 . What is the output of (""aaa"".count(""aa""))?
+a. 1
+b. 2
+c. 3
+find()
+The find() method returns the index of the first occurrence of a substring in a given string. If the substring
+does not exist in the given string, the value of -1 is returned.
+CHECKPOINT
+Finding the first index of a substring
+Finding the first index of a substring; ch 8, video 6 (https://www.openstax.org/r/finding-substring-index)",1,same chunk as B; clean start/end; but count() checkpoint separated from its theory (previous chunk) and mixes count() quiz + find() theory

@@ -1,0 +1,606 @@
+strategy,qid,question,evidence_quote,auto_evidence_hit3,top1,top2,top3,grade_0_2,reason
+A,t01,How are two values compared when using operators such as < or >?,"""When comparing two string values, the matching characters in two string values are compared sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical operators.""",True,"[A-openstax-intro-python-0002 p[197, 198]] operators (in and
+not in). When comparing two string values, the matching characters in two string values are compared
+sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical
+operators.
+Strings
+8
+Operator Description Example Output Explanation
+> or >=
+Checks whether the
+first string value is
+greater than (or greater
+than or equal to) the
+second string value.
+""c"" >
+""d"" False
+When comparing ""c"" operand to ""d""
+operand, the ASCII value for ""c"" i","[A-openstax-intro-python-0001 p[197]] mparing string values, string slicing, searching,
+testing, formatting, and modifying.
+8.1 String operations
+Learning objectives
+By the end of this section you should be able to
+• Compare strings using logical and membership operators.
+• Use lower() and upper() string methods to convert string values to lowercase and uppercase
+characters.
+String comparison
+String values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and
+not in). When comparing two stri","[A-openstax-intro-python-0003 p[198]] operand to ""d""
+operand, the ASCII value for ""c"" is smaller
+than the ASCII value for ""d"". Therefore, ""c""
+< ""d"". The expression ""c"" > ""d""
+evaluates to False.
+< or <=
+Checks whether the
+first string value is less
+than (or less than or
+equal to) the second
+string value.
+""ab"" <
+""ac"" True
+When comparing ""ab"" operand to ""ac""
+operand, the first characters are the same,
+but the second character of ""ab"" is less
+than the second character in ""ac"" and as
+such ""ab"" < ""ac"".
+== Checks whether two
+string values",2,evidence fully in top1 (p.197); top3 adds ASCII examples
+A,t02,When does a filtering list comprehension add an element to the new list?,"""In a filter list comprehension, an element is added into list_name only if the condition is met.""",True,"[A-openstax-intro-python-0106 p[236]] e nested to represent multidimensional data.
+• A list comprehension is a compact way of creating a new list, which can be used to filter items from an
+existing list.
+At this point, you should be able to write programs using lists.
+Function Description
+append(element) Adds the specified element to the end of a list.
+remove(element) Removes the specified element from the list if the element exists.
+pop() Removes the last element of a list.
+max(list) Returns the maximum element of the list specifie","[A-openstax-intro-python-0101 p[234]] 33333333335, 4.333333333333333]
+b. [0, 1, 2, 3, 4]
+c. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Filtering using list comprehensions
+List comprehensions can be used to filter items from a given list. A condition is added to the list
+comprehension.
+list_name = [expression for loop_variable in container if condition]
+In a filter list comprehension, an element is added into list_name only if the condition is met.
+CHECKPOINT
+Filtering a list
+Filtering a list; ch 9, video 5 (https://www.openstax","[A-openstax-intro-python-0096 p[232]] Implement filtering using list comprehension.
+List comprehensions
+A list comprehension is a Python statement to compactly create a new list using a pattern.
+The general form of a list comprehension statement is shown below.
+list_name = [expression for loop_variable in iterable]
+list_name refers to the name of a new list, which can be anything, and the for is the for loop keyword. An
+expression defines what will become part of the new list. loop_variable is an iterator, and iterable is an
+object",2,evidence fully in top2 (p.234) with syntax; top1 summary too general
+A,t03,What is a nested list?,"""When a list is an element inside a larger list, it is called a nested list.""",True,"[A-openstax-intro-python-0088 p[229]] mensional indexing.
+• Use nested loops to iterate a list-of-lists.
+List-of-lists
+Lists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list
+with the list [3, 5] being the element at index 1.
+When a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing
+multidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-
+of-lists.
+Ex: A table","[A-openstax-intro-python-0090 p[230]] b. [7, 4, 5
+3, 9, 6
+1, 2, 8]
+c. [[7, 3, 1], [4, 9, 2], [1, 2, 8]
+2 . What would be the correct index for the number 6 in the above list?
+a. [5]
+b. [2][1]
+c. [1][2]
+3 . What would be the result of the following code:
+print(matA[0])
+a. Error
+b. 7
+c. [7, 4, 5]
+Using nested loops to iterate nested lists
+A nested loop structure can be used to iterate a list-of-lists. For a two-dimensional list-of-lists, an outer for
+loop can be used for rows, and an inner for loop can be used for columns.
+EXAMPLE 9.","[A-openstax-intro-python-0087 p[229]] reate a sentence using the words in
+each list and print those sentences (no need to add periods at the end of the sentences).
+Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/
+9-3-common-list-operations)
+9.4 Nested lists
+Learning objectives
+By the end of this section you should be able to
+• Demonstrate the use of a list-of-lists to structure data.
+• Demonstrate individual element addressing using multi-dimensional indexing.
+• Use nested loops to iterate",2,"evidence fully in top1 (p.229) with example [2, [3, 5], 17]"
+A,t04,What effect does putting + in a numeric format like {:+.2f} have?,"""The + sign before the precision specification adds a sign character to the output.""",True,"[A-openstax-intro-python-0049 p[214]] }""
+print(template.format(""123456789""))
+a. 56789
+b. 123456
+c. 123456789
+Formatting numbers
+The format() method can be used to format numerical values. Numerical values can be padded to have a
+given minimum length, precision, and sign character. The syntax for modifying numeric values follows the
+{[index]:[width][.precision][type]} structure. In the given syntax,
+• The index field refers to the index of the argument.
+• The width field refers to the minimum length of the string.
+• The precision fie","[A-openstax-intro-python-0052 p[215]] fication .2 shows the output
+must have two decimal places. The f specification
+is an identifier of floating-point formatting. The +
+sign before the precision specification adds a sign
+character to the output.
+print(""{:0>5d}"".format(5)) 00005
+The format specification 0>5 defines the width
+field as 5, and thus the output must have a
+minimum length of 5. And, if the number has
+fewer than five digits, the number must be
+padded with 0's from the left side. The d
+specification is an identifier of a de","[A-openstax-intro-python-0051 p[214, 215]] ) 0.9795000
+The format specification .7 shows the output
+must have seven decimal places. The f
+specification is an identifier of floating-point
+formatting.
+print(""{:.3f}"".format(12)) 12.000
+The format specification .3 shows the output
+must have three decimal places. The f
+specification is an identifier of floating-point
+formatting.
+Table 8.3 Numerical formatting options.
+Example Output Explanation
+print(""{:+.2f}"".format(4)) +4.00
+The format specification .2 shows the output
+must have two decimal",2,evidence fully in top2 (p.215); example {:+.2f} -> +4.00 in top3; top1 is generic syntax only
+A,t05,At what number does argument indexing start in numbered replacement fields?,"""The indexing of the arguments starts from 0.""",True,"[A-openstax-intro-python-0041 p[212]] me"" is at index 0, and the second argument,
+""Welcome"", is at index 1. Replacing these arguments in the order of ""{1}{0}"" creates the string ""Welcome
+Home"".
+Numbered replacement fields can use argument's values for multiple replacement fields by using the same
+argument index. The example below illustrates how an argument is used for more than one numbered
+replacement field.
+EXAMPLE 8.8
+Numbered replacement field to build a phrase
+Numbered replacement fields are used in this example to build phras","[A-openstax-intro-python-0040 p[211, 212]] greeting, name = name))
+a. greeting name
+b. Hi Jess
+c. Jess Hi
+Numbered replacement fields
+Python's string format() method can use positional ordering to match the numbered arguments. The
+replacement fields that use the positional ordering of arguments are called numbered replacement fields.
+The indexing of the arguments starts from 0. Ex: print(""{1}{0}"".format(""Home"", ""Welcome"")) outputs
+the string value ""Welcome Home"" as the first argument. ""Home"" is at index 0, and the second argument,
+""Welco","[A-openstax-intro-python-0036 p[210]] s
+Replacement fields can be tagged with a label, called named replacement fields, for ease of access and code
+readability. The example below illustrates how named replacement fields can be used in string templates.
+EXAMPLE 8.7
+Season weather template using named replacement fields
+A named replacement argument is a convenient way of assigning name tags to replacement fields and
+passing values associated with replacement fields using corresponding names (instead of passing values in
+order).
+s = ""W",2,evidence fully in top2 (p.211-212) with {1}{0} example; top1 implies index 0 via example; top3 other topic
+B,t01,How are two values compared when using operators such as < or >?,"""When comparing two string values, the matching characters in two string values are compared sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical operators.""",True,"[B-openstax-intro-python-0004 p[198]] < or <=
+Checks whether the
+first string value is less
+than (or less than or
+equal to) the second
+string value.
+""ab"" <
+""ac"" True
+When comparing ""ab"" operand to ""ac""
+operand, the first characters are the same,
+but the second character of ""ab"" is less
+than the second character in ""ac"" and as
+such ""ab"" < ""ac"".
+== Checks whether two
+string values are equal.
+""aa"" ==
+""aa"" True
+Since all characters in the first operand and
+the second operand are the same, the two
+string values are equal.
+!=
+Checks whether two
+string values are not
+equal.
+""a"" !=
+""b"" True
+The two operands contain different string
+values (""a"" vs. ""b""), and the result of
+checking whether the two are not the same
+evaluates to True.
+in
+Checks whether the
+second operand
+contains the first
+operand.","[B-openstax-intro-python-0003 p[197, 198]] String comparison
+String values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and
+not in). When comparing two string values, the matching characters in two string values are compared
+sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical
+operators.
+Strings
+8
+Operator Description Example Output Explanation
+> or >=
+Checks whether the
+first string value is
+greater than (or greater
+than or equal to) the
+second string value.
+""c"" >
+""d"" False
+When comparing ""c"" operand to ""d""
+operand, the ASCII value for ""c"" is smaller
+than the ASCII value for ""d"". Therefore, ""c""
+< ""d"". The expression ""c"" > ""d""
+evaluates to False.","[B-openstax-intro-python-0054 p[218]] 8.6 Chapter summary
+Highlights from this chapter include:
+• A string is a sequence of characters.
+• Logical operators can be used to compare two string values. String comparison is done by comparing
+corresponding ASCII values of characters in the order of appearance in the string.
+• String indexing is used to access a character or a sequence of characters in the string.
+• String objects are immutable.
+• String splicing.
+At this point, you should be able to write programs dealing with string values.
+TRY IT",2,evidence fully in top2 (p.197) with example; top1 is operator table without general rule; top3 summary confirms ASCII comparison
+B,t02,When does a filtering list comprehension add an element to the new list?,"""In a filter list comprehension, an element is added into list_name only if the condition is met.""",True,"[B-openstax-intro-python-0085 p[234]] List comprehensions
+1 . The component of a list comprehension defining an element of the new list is the _____.
+a. expression
+b. loop_variable
+c. container
+2 . What would be the contents of b_list after executing the code below?
+a_list = [1, 2, 3, 4, 5]
+b_list = [i+2 for i in a_list]
+a. [1, 2, 3, 4, 5]
+b. [0, 1, 2, 3, 4]
+c. [3, 4, 5, 6, 7]
+3 . What does new_list contain after executing the statement below?
+new_list = [i//3 for i in range(1, 15, 3)]
+a. [0.3333333333333333, 1.3333333333333333, 2.3333333333333335,
+3.3333333333333335, 4.333333333333333]
+b. [0, 1, 2, 3, 4]
+c. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Filtering using list comprehensions
+List comprehensions can be used to filter items from a given list. A condition is added to the list
+comprehension.","[B-openstax-intro-python-0086 p[234]] list_name = [expression for loop_variable in container if condition]
+In a filter list comprehension, an element is added into list_name only if the condition is met.
+CHECKPOINT
+Filtering a list
+Filtering a list; ch 9, video 5 (https://www.openstax.org/r/filtering-list)
+CONCEPTS IN PRACTICE","[B-openstax-intro-python-0087 p[234, 235]] Filtering using list comprehensions
+For each code using list comprehension, select the correct resultant list in new_list.
+4 . my_list = [21, -1, 50, -9, 300, -50, 2]
+new_list = [m for m in my_list if m < 0]
+a. [21, 50, 300, 2]
+b. [21, -1, 50, -9, 300, -50, 2]
+c. [-1, -9, -50]
+5 . my_string = ""This is a home.""
+new_list = [i for i in my_string if i in 'aeiou']
+a. [i, i, a, o, e]
+b. ['i', 'i'', 'a', 'o', 'e']
+c. Error",2,evidence fully in top2 (p.234) with syntax; filtering intro split into top1; top3 has filter exercises
+B,t03,What is a nested list?,"""When a list is an element inside a larger list, it is called a nested list.""",True,"[B-openstax-intro-python-0076 p[229, 230]] List-of-lists
+Lists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list
+with the list [3, 5] being the element at index 1.
+When a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing
+multidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-
+of-lists.
+Ex: A table can be stored as a two-dimensional list-of-lists, where each row of data is a list in the list-of-lists.
+TRY IT
+CHECKPOINT
+List-of-lists
+List-of-lists; ch 9, video 4 (https://www.openstax.org/r/list-of-lists)
+CONCEPTS IN PRACTICE","[B-openstax-intro-python-0077 p[230]] Lists
+For each of the questions below, consider the following matrix:
+1 . What would be the correct way to represent matA in Python?
+a. [[7, 4, 5], [3, 9, 6], [1, 2, 8]]
+b. [7, 4, 5
+3, 9, 6
+1, 2, 8]
+c. [[7, 3, 1], [4, 9, 2], [1, 2, 8]
+2 . What would be the correct index for the number 6 in the above list?
+a. [5]
+b. [2][1]
+c. [1][2]
+3 . What would be the result of the following code:
+print(matA[0])
+a. Error
+b. 7
+c. [7, 4, 5]
+Using nested loops to iterate nested lists
+A nested loop structure can be used to iterate a list-of-lists. For a two-dimensional list-of-lists, an outer for
+loop can be used for rows, and an inner for loop can be used for columns.","[B-openstax-intro-python-0075 p[229]] 9.4 Nested lists
+Learning objectives
+By the end of this section you should be able to
+• Demonstrate the use of a list-of-lists to structure data.
+• Demonstrate individual element addressing using multi-dimensional indexing.
+• Use nested loops to iterate a list-of-lists.",2,evidence fully in top1 (p.229) with example and list-of-lists explanation
+B,t04,What effect does putting + in a numeric format like {:+.2f} have?,"""The + sign before the precision specification adds a sign character to the output.""",True,"[B-openstax-intro-python-0043 p[214]] template = ""{:5}""
+print(template.format(""123456789""))
+a. 56789
+b. 123456
+c. 123456789
+Formatting numbers
+The format() method can be used to format numerical values. Numerical values can be padded to have a
+given minimum length, precision, and sign character. The syntax for modifying numeric values follows the
+{[index]:[width][.precision][type]} structure. In the given syntax,
+• The index field refers to the index of the argument.
+• The width field refers to the minimum length of the string.
+• The precision field refers to the floating-point precision of the given number.","[B-openstax-intro-python-0046 p[215, 216]] Table 8.3 Numerical formatting options.
+CONCEPTS IN PRACTICE
+Numeric value formatting examples
+10 . What is the output of print('{0:.3f}'.format(3.141592))?
+a. 3.141592
+b. 3.1
+c. 3.142
+11 . What is the output of print('{:1>3d}'.format(3))?
+a. 113
+b. 311
+c. 3.000
+12 . What is the output of print('{:+d}'.format(123))?
+a. 123
+b. +123
+c. :+123
+Formatting a list of numbers
+Given a list of numbers (floating-point or integer), print numbers with two decimal place precision and at
+TRY IT
+least six characters.
+Input: [12.5, 2]
+Prints: 012.50
+002:00
+Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/
+8-4-string-formatting)","[B-openstax-intro-python-0045 p[215]] Example Output Explanation
+print(""{:+.2f}"".format(4)) +4.00
+The format specification .2 shows the output
+must have two decimal places. The f specification
+is an identifier of floating-point formatting. The +
+sign before the precision specification adds a sign
+character to the output.
+print(""{:0>5d}"".format(5)) 00005
+The format specification 0>5 defines the width
+field as 5, and thus the output must have a
+minimum length of 5. And, if the number has
+fewer than five digits, the number must be
+padded with 0's from the left side. The d
+specification is an identifier of a decimal number
+formatting.
+print(""{:.3s}"".format(""12.50"")) 12.
+The format specification .3 shows the output will
+have three characters. The s specification is an
+identifier of string formatting.",2,evidence fully in top3 (p.215) together with {:+.2f} -> +4.00 example; top2 quiz Q12 illustrates +; top1 syntax only
+B,t05,At what number does argument indexing start in numbered replacement fields?,"""The indexing of the arguments starts from 0.""",True,"[B-openstax-intro-python-0036 p[212]] Numbered replacement fields can use argument's values for multiple replacement fields by using the same
+argument index. The example below illustrates how an argument is used for more than one numbered
+replacement field.
+EXAMPLE 8.8","[B-openstax-intro-python-0035 p[211, 212]] greeting = ""Hi""
+name = ""Jess""
+print(""{greeting} {name}"".format(greeting = greeting, name = name))
+a. greeting name
+b. Hi Jess
+c. Jess Hi
+Numbered replacement fields
+Python's string format() method can use positional ordering to match the numbered arguments. The
+replacement fields that use the positional ordering of arguments are called numbered replacement fields.
+The indexing of the arguments starts from 0. Ex: print(""{1}{0}"".format(""Home"", ""Welcome"")) outputs
+the string value ""Welcome Home"" as the first argument. ""Home"" is at index 0, and the second argument,
+""Welcome"", is at index 1. Replacing these arguments in the order of ""{1}{0}"" creates the string ""Welcome
+Home"".","[B-openstax-intro-python-0037 p[212]] Numbered replacement field to build a phrase
+Numbered replacement fields are used in this example to build phrases like ""very very cold"" or ""very
+hot"".
+template1 = ""{0} {0} {1}""
+template2 = ""{0} {1}""
+print(template1.format(""very"", ""cold""))
+print(template2.format(""very"", ""hot""))
+The above code's output is:
+very very cold
+very hot
+String length and alignment formatting
+Formatting the string length may be needed for standardizing the output style when multiple string values of
+the same context are being created and printed. The example below shows a use case of string formatting in
+printing a table with minimum-length columns and specific alignment.",2,evidence fully in top2 (p.211-212) with {1}{0} example; top1 short fragment with dangling EXAMPLE 8.8; top3 example uses {0}
+C,t01,How are two values compared when using operators such as < or >?,"""When comparing two string values, the matching characters in two string values are compared sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical operators.""",True,"[B-openstax-intro-python-0004 p[198]] < or <=
+Checks whether the
+first string value is less
+than (or less than or
+equal to) the second
+string value.
+""ab"" <
+""ac"" True
+When comparing ""ab"" operand to ""ac""
+operand, the first characters are the same,
+but the second character of ""ab"" is less
+than the second character in ""ac"" and as
+such ""ab"" < ""ac"".
+== Checks whether two
+string values are equal.
+""aa"" ==
+""aa"" True
+Since all characters in the first operand and
+the second operand are the same, the two
+string values are equal.
+!=
+Checks whether two
+string values are not
+equal.
+""a"" !=
+""b"" True
+The two operands contain different string
+values (""a"" vs. ""b""), and the result of
+checking whether the two are not the same
+evaluates to True.
+in
+Checks whether the
+second operand
+contains the first
+operand.","[B-openstax-intro-python-0003 p[197, 198]] String comparison
+String values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and
+not in). When comparing two string values, the matching characters in two string values are compared
+sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical
+operators.
+Strings
+8
+Operator Description Example Output Explanation
+> or >=
+Checks whether the
+first string value is
+greater than (or greater
+than or equal to) the
+second string value.
+""c"" >
+""d"" False
+When comparing ""c"" operand to ""d""
+operand, the ASCII value for ""c"" is smaller
+than the ASCII value for ""d"". Therefore, ""c""
+< ""d"". The expression ""c"" > ""d""
+evaluates to False.","[B-openstax-intro-python-0054 p[218]] 8.6 Chapter summary
+Highlights from this chapter include:
+• A string is a sequence of characters.
+• Logical operators can be used to compare two string values. String comparison is done by comparing
+corresponding ASCII values of characters in the order of appearance in the string.
+• String indexing is used to access a character or a sequence of characters in the string.
+• String objects are immutable.
+• String splicing.
+At this point, you should be able to write programs dealing with string values.
+TRY IT",2,same chunk as B; evidence fully in top2 (p.197) with example; top1 is operator table without general rule; top3 summary confirms ASCII comparison
+C,t02,When does a filtering list comprehension add an element to the new list?,"""In a filter list comprehension, an element is added into list_name only if the condition is met.""",True,"[B-openstax-intro-python-0085 p[234]] List comprehensions
+1 . The component of a list comprehension defining an element of the new list is the _____.
+a. expression
+b. loop_variable
+c. container
+2 . What would be the contents of b_list after executing the code below?
+a_list = [1, 2, 3, 4, 5]
+b_list = [i+2 for i in a_list]
+a. [1, 2, 3, 4, 5]
+b. [0, 1, 2, 3, 4]
+c. [3, 4, 5, 6, 7]
+3 . What does new_list contain after executing the statement below?
+new_list = [i//3 for i in range(1, 15, 3)]
+a. [0.3333333333333333, 1.3333333333333333, 2.3333333333333335,
+3.3333333333333335, 4.333333333333333]
+b. [0, 1, 2, 3, 4]
+c. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+Filtering using list comprehensions
+List comprehensions can be used to filter items from a given list. A condition is added to the list
+comprehension.","[B-openstax-intro-python-0086 p[234]] list_name = [expression for loop_variable in container if condition]
+In a filter list comprehension, an element is added into list_name only if the condition is met.
+CHECKPOINT
+Filtering a list
+Filtering a list; ch 9, video 5 (https://www.openstax.org/r/filtering-list)
+CONCEPTS IN PRACTICE","[B-openstax-intro-python-0087 p[234, 235]] Filtering using list comprehensions
+For each code using list comprehension, select the correct resultant list in new_list.
+4 . my_list = [21, -1, 50, -9, 300, -50, 2]
+new_list = [m for m in my_list if m < 0]
+a. [21, 50, 300, 2]
+b. [21, -1, 50, -9, 300, -50, 2]
+c. [-1, -9, -50]
+5 . my_string = ""This is a home.""
+new_list = [i for i in my_string if i in 'aeiou']
+a. [i, i, a, o, e]
+b. ['i', 'i'', 'a', 'o', 'e']
+c. Error",2,same chunk as B; evidence fully in top2 (p.234) with syntax; filtering intro split into top1; top3 has filter exercises
+C,t03,What is a nested list?,"""When a list is an element inside a larger list, it is called a nested list.""",True,"[B-openstax-intro-python-0076 p[229, 230]] List-of-lists
+Lists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list
+with the list [3, 5] being the element at index 1.
+When a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing
+multidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-
+of-lists.
+Ex: A table can be stored as a two-dimensional list-of-lists, where each row of data is a list in the list-of-lists.
+TRY IT
+CHECKPOINT
+List-of-lists
+List-of-lists; ch 9, video 4 (https://www.openstax.org/r/list-of-lists)
+CONCEPTS IN PRACTICE","[B-openstax-intro-python-0077 p[230]] Lists
+For each of the questions below, consider the following matrix:
+1 . What would be the correct way to represent matA in Python?
+a. [[7, 4, 5], [3, 9, 6], [1, 2, 8]]
+b. [7, 4, 5
+3, 9, 6
+1, 2, 8]
+c. [[7, 3, 1], [4, 9, 2], [1, 2, 8]
+2 . What would be the correct index for the number 6 in the above list?
+a. [5]
+b. [2][1]
+c. [1][2]
+3 . What would be the result of the following code:
+print(matA[0])
+a. Error
+b. 7
+c. [7, 4, 5]
+Using nested loops to iterate nested lists
+A nested loop structure can be used to iterate a list-of-lists. For a two-dimensional list-of-lists, an outer for
+loop can be used for rows, and an inner for loop can be used for columns.","[B-openstax-intro-python-0075 p[229]] 9.4 Nested lists
+Learning objectives
+By the end of this section you should be able to
+• Demonstrate the use of a list-of-lists to structure data.
+• Demonstrate individual element addressing using multi-dimensional indexing.
+• Use nested loops to iterate a list-of-lists.",2,same chunk as B; evidence fully in top1 (p.229) with example and list-of-lists explanation
+C,t04,What effect does putting + in a numeric format like {:+.2f} have?,"""The + sign before the precision specification adds a sign character to the output.""",True,"[B-openstax-intro-python-0043 p[214]] template = ""{:5}""
+print(template.format(""123456789""))
+a. 56789
+b. 123456
+c. 123456789
+Formatting numbers
+The format() method can be used to format numerical values. Numerical values can be padded to have a
+given minimum length, precision, and sign character. The syntax for modifying numeric values follows the
+{[index]:[width][.precision][type]} structure. In the given syntax,
+• The index field refers to the index of the argument.
+• The width field refers to the minimum length of the string.
+• The precision field refers to the floating-point precision of the given number.","[B-openstax-intro-python-0046 p[215, 216]] Table 8.3 Numerical formatting options.
+CONCEPTS IN PRACTICE
+Numeric value formatting examples
+10 . What is the output of print('{0:.3f}'.format(3.141592))?
+a. 3.141592
+b. 3.1
+c. 3.142
+11 . What is the output of print('{:1>3d}'.format(3))?
+a. 113
+b. 311
+c. 3.000
+12 . What is the output of print('{:+d}'.format(123))?
+a. 123
+b. +123
+c. :+123
+Formatting a list of numbers
+Given a list of numbers (floating-point or integer), print numbers with two decimal place precision and at
+TRY IT
+least six characters.
+Input: [12.5, 2]
+Prints: 012.50
+002:00
+Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/
+8-4-string-formatting)","[B-openstax-intro-python-0045 p[215]] Example Output Explanation
+print(""{:+.2f}"".format(4)) +4.00
+The format specification .2 shows the output
+must have two decimal places. The f specification
+is an identifier of floating-point formatting. The +
+sign before the precision specification adds a sign
+character to the output.
+print(""{:0>5d}"".format(5)) 00005
+The format specification 0>5 defines the width
+field as 5, and thus the output must have a
+minimum length of 5. And, if the number has
+fewer than five digits, the number must be
+padded with 0's from the left side. The d
+specification is an identifier of a decimal number
+formatting.
+print(""{:.3s}"".format(""12.50"")) 12.
+The format specification .3 shows the output will
+have three characters. The s specification is an
+identifier of string formatting.",2,same chunk as B; evidence fully in top3 (p.215) together with {:+.2f} -> +4.00 example; top2 quiz Q12 illustrates +; top1 syntax only
+C,t05,At what number does argument indexing start in numbered replacement fields?,"""The indexing of the arguments starts from 0.""",True,"[B-openstax-intro-python-0036 p[212]] Numbered replacement fields can use argument's values for multiple replacement fields by using the same
+argument index. The example below illustrates how an argument is used for more than one numbered
+replacement field.
+EXAMPLE 8.8","[B-openstax-intro-python-0035 p[211, 212]] greeting = ""Hi""
+name = ""Jess""
+print(""{greeting} {name}"".format(greeting = greeting, name = name))
+a. greeting name
+b. Hi Jess
+c. Jess Hi
+Numbered replacement fields
+Python's string format() method can use positional ordering to match the numbered arguments. The
+replacement fields that use the positional ordering of arguments are called numbered replacement fields.
+The indexing of the arguments starts from 0. Ex: print(""{1}{0}"".format(""Home"", ""Welcome"")) outputs
+the string value ""Welcome Home"" as the first argument. ""Home"" is at index 0, and the second argument,
+""Welcome"", is at index 1. Replacing these arguments in the order of ""{1}{0}"" creates the string ""Welcome
+Home"".","[B-openstax-intro-python-0037 p[212]] Numbered replacement field to build a phrase
+Numbered replacement fields are used in this example to build phrases like ""very very cold"" or ""very
+hot"".
+template1 = ""{0} {0} {1}""
+template2 = ""{0} {1}""
+print(template1.format(""very"", ""cold""))
+print(template2.format(""very"", ""hot""))
+The above code's output is:
+very very cold
+very hot
+String length and alignment formatting
+Formatting the string length may be needed for standardizing the output style when multiple string values of
+the same context are being created and printed. The example below shows a use case of string formatting in
+printing a table with minimum-length columns and specific alignment.",2,same chunk as B; evidence fully in top2 (p.211-212) with {1}{0} example; top1 short fragment with dangling EXAMPLE 8.8; top3 example uses {0}

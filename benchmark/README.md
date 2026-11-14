@@ -36,6 +36,7 @@ Nguy cơ rò rỉ còn lại: 8.4 và 8.1 cũng có câu dev (q07–q09 cùng m�
 3. nếu vẫn hòa: coherence trung bình cao hơn;
 4. rồi số chunk/thời gian ingest thấp hơn.
 Test chỉ chạy một lần sau khi đã cố định cấu hình.
+5. (Bổ sung sau khi xem dev, trước khi chạy test) Nếu vẫn hòa: chọn cấu hình có filter compliance trên dev cao hơn. Dev: B = C ở Hit@1 9/15, Hit@3 13/15; C tuân thủ filter 2/2, B 0/2 → chọn C.
 
 ## Ghi chú nguồn
 Bảng 9.1 trong sách ghi `min(list)` là "Returns the maximum element" (lỗi của nguồn) — không dùng làm gold.

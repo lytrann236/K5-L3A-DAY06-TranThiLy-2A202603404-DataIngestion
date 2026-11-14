@@ -1,0 +1,88 @@
+{
+  "run_at": "2026-11-13T12:04:56+00:00",
+  "model": "BAAI/bge-small-en-v1.5",
+  "search_seconds_all_strategies": 1.16,
+  "rows": [
+    {
+      "strategy": "A",
+      "split": "dev",
+      "N": 15,
+      "hit1": 6,
+      "hit3": 9,
+      "filter_questions": 2,
+      "filter_compliant": 0
+    },
+    {
+      "strategy": "A",
+      "split": "test",
+      "N": 5,
+      "hit1": 2,
+      "hit3": 5,
+      "filter_questions": 1,
+      "filter_compliant": 1
+    },
+    {
+      "strategy": "A",
+      "split": "all",
+      "N": 20,
+      "hit1": 8,
+      "hit3": 14,
+      "filter_questions": 3,
+      "filter_compliant": 1
+    },
+    {
+      "strategy": "B",
+      "split": "dev",
+      "N": 15,
+      "hit1": 9,
+      "hit3": 13,
+      "filter_questions": 2,
+      "filter_compliant": 0
+    },
+    {
+      "strategy": "B",
+      "split": "test",
+      "N": 5,
+      "hit1": 1,
+      "hit3": 5,
+      "filter_questions": 1,
+      "filter_compliant": 1
+    },
+    {
+      "strategy": "B",
+      "split": "all",
+      "N": 20,
+      "hit1": 10,
+      "hit3": 18,
+      "filter_questions": 3,
+      "filter_compliant": 1
+    },
+    {
+      "strategy": "C",
+      "split": "dev",
+      "N": 15,
+      "hit1": 9,
+      "hit3": 13,
+      "filter_questions": 2,
+      "filter_compliant": 2
+    },
+    {
+      "strategy": "C",
+      "split": "test",
+      "N": 5,
+      "hit1": 1,
+      "hit3": 5,
+      "filter_questions": 1,
+      "filter_compliant": 1
+    },
+    {
+      "strategy": "C",
+      "split": "all",
+      "N": 20,
+      "hit1": 10,
+      "hit3": 18,
+      "filter_questions": 3,
+      "filter_compliant": 3
+    }
+  ]
+}

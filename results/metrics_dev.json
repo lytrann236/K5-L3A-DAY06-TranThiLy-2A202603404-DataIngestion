@@ -1,0 +1,61 @@
+{
+  "run_at": "2026-11-13T11:45:53+00:00",
+  "model": "BAAI/bge-small-en-v1.5",
+  "search_seconds_all_strategies": 1.09,
+  "rows": [
+    {
+      "strategy": "A",
+      "split": "dev",
+      "N": 15,
+      "hit1": 6,
+      "hit3": 9,
+      "filter_questions": 2,
+      "filter_compliant": 0
+    },
+    {
+      "strategy": "A",
+      "split": "all",
+      "N": 15,
+      "hit1": 6,
+      "hit3": 9,
+      "filter_questions": 2,
+      "filter_compliant": 0
+    },
+    {
+      "strategy": "B",
+      "split": "dev",
+      "N": 15,
+      "hit1": 9,
+      "hit3": 13,
+      "filter_questions": 2,
+      "filter_compliant": 0
+    },
+    {
+      "strategy": "B",
+      "split": "all",
+      "N": 15,
+      "hit1": 9,
+      "hit3": 13,
+      "filter_questions": 2,
+      "filter_compliant": 0
+    },
+    {
+      "strategy": "C",
+      "split": "dev",
+      "N": 15,
+      "hit1": 9,
+      "hit3": 13,
+      "filter_questions": 2,
+      "filter_compliant": 2
+    },
+    {
+      "strategy": "C",
+      "split": "all",
+      "N": 15,
+      "hit1": 9,
+      "hit3": 13,
+      "filter_questions": 2,
+      "filter_compliant": 2
+    }
+  ]
+}
